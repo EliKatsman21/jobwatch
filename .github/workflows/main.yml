@@ -2,7 +2,7 @@ name: jobwatch
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # GitHub may delay runs a few minutes under load
+    - cron: "*/5 * * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -30,5 +30,14 @@ jobs:
         run: |
           git config user.name "jobwatch"
           git config user.email "jobwatch@users.noreply.github.com"
-          git add seen.json
-          git diff --cached --quiet || (git commit -m "update seen" && git pull --rebase -q && git push -q)
+          cp seen.json /tmp/local.json 2>/dev/null || echo '{"jobs":{}}' > /tmp/local.json
+          for i in 1 2 3; do
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            python3 -c "import json,os;l=json.load(open('/tmp/local.json'))['jobs'];p='seen.json';r=json.load(open(p))['jobs'] if os.path.exists(p) else {};r.update({k:v for k,v in l.items() if k not in r});json.dump({'jobs':r},open(p,'w'),ensure_ascii=False)"
+            git add seen.json
+            git diff --cached --quiet && break
+            git commit -q -m "update seen"
+            git push -q && break
+            sleep 3
+          done
