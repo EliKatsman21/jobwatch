@@ -1,0 +1,59 @@
+{
+  "filters": {
+    "include": [
+      "\\bQA\\b", "quality assurance", "automation engineer", "test engineer", "\\bSDET\\b",
+      "software (test|quality)", "validation engineer",
+      "professional services", "solutions? engineer", "integration engineer",
+      "system integration", "deployment engineer", "implementation engineer",
+      "support engineer", "technical support", "customer (support )?engineer",
+      "field (application|service) engineer", "systems? engineer", "service engineer",
+      "customer success engineer", "technical account", "תמיכה טכנית", "מהנדס.? (תמיכה|שירות|מערכות)"
+    ],
+    "hot": [
+      "professional services", "integration engineer", "system integration",
+      "\\bQA\\b.*(junior|student|support)", "junior.*(QA|quality|automation)",
+      "support engineer", "deployment engineer", "implementation engineer",
+      "solutions? engineer", "QA student", "software QA"
+    ],
+    "exclude": [
+      "\\bsenior\\b", "\\bstaff\\b", "\\bprincipal\\b", "\\blead\\b", "director", "\\bvp\\b",
+      "mechanical", "physical design", "\\bASIC\\b", "\\bRTL\\b", "layout", "chip",
+      "thermal", "optical", "analog", "\\bFPGA\\b", "supplier quality", "manufacturing",
+      "sales engineer", "pre-?sales"
+    ],
+    "locations": [
+      "yokneam", "yoqneam", "yokne'am", "haifa", "caesarea", "qaesarea", "kesarya",
+      "migdal", "megido", "nesher", "kiryat (ata|motzkin|bialik|yam)", "tirat", "atlit",
+      "zichron", "binyamina", "hadera", "yizre", "afula", "karmiel", "nazareth"
+    ]
+  },
+  "max_alerts_per_run": 15,
+  "keep_days": 120,
+  "sources": [
+    {
+      "type": "workday", "name": "NVIDIA",
+      "host": "nvidia.wd5.myworkdayjobs.com", "site": "NVIDIAExternalCareerSite",
+      "queries": ["Yokneam", "Kiryat Ata", "Haifa"], "max_per_query": 100
+    },
+
+    {"type": "workday", "name": "Dell", "enabled": false,
+     "host": "dell.wd1.myworkdayjobs.com", "site": "External",
+     "queries": ["Haifa", "Israel QA"], "max_per_query": 60,
+     "_note": "UNVERIFIED host/site - open Dell's careers page, copy host + site from the URL, then set enabled=true"},
+
+    {"type": "workday", "name": "Medtronic", "enabled": false,
+     "host": "medtronic.wd1.myworkdayjobs.com", "site": "MedtronicCareers",
+     "queries": ["Yokneam", "Israel"], "max_per_query": 60,
+     "_note": "UNVERIFIED host/site - same procedure"},
+
+    {"type": "greenhouse", "name": "EXAMPLE-greenhouse", "enabled": false, "board": "board-slug-here",
+     "_note": "Works for any company whose careers URL looks like boards.greenhouse.io/<slug>"},
+
+    {"type": "lever", "name": "EXAMPLE-lever", "enabled": false, "company": "company-slug-here",
+     "_note": "Works for jobs.lever.co/<slug>"},
+
+    {"type": "rss", "name": "GoogleAlert-QA", "enabled": false, "skip_location": true,
+     "url": "PASTE-GOOGLE-ALERTS-RSS-URL-HERE",
+     "_note": "Optional: a Google Alert (deliver to RSS) for e.g. site:comeet.com \"QA\" Haifa"}
+  ]
+}
