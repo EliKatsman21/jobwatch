@@ -1,0 +1,29 @@
+[
+  {"type": "workday", "name": "Medtronic",
+   "host": "medtronic.wd1.myworkdayjobs.com", "site": "MedtronicCareers",
+   "queries": ["Yoqneam", "Yokneam", "Haifa"], "max_per_query": 100},
+
+  {"type": "workday", "name": "Philips",
+   "host": "philips.wd3.myworkdayjobs.com", "site": "jobs-and-careers",
+   "queries": ["Haifa", "Yokneam", "Israel"], "max_per_query": 100},
+
+  {"type": "workday", "name": "Intel",
+   "host": "intel.wd1.myworkdayjobs.com", "site": "External",
+   "queries": ["Haifa", "Israel"], "max_per_query": 100,
+   "_note": "not verified - if it shows as ERROR in the run log, delete this entry"},
+
+  {"type": "workday", "name": "Dell",
+   "host": "dell.wd1.myworkdayjobs.com", "site": "External",
+   "queries": ["Haifa", "Israel"], "max_per_query": 100,
+   "_note": "not verified - if it shows as ERROR in the run log, delete this entry"},
+
+  {"type": "workday", "name": "Qualcomm",
+   "host": "qualcomm.wd5.myworkdayjobs.com", "site": "External",
+   "queries": ["Haifa", "Israel"], "max_per_query": 100,
+   "_note": "not verified - if it shows as ERROR in the run log, delete this entry"},
+
+  {"type": "workday", "name": "Applied Materials",
+   "host": "amat.wd1.myworkdayjobs.com", "site": "External",
+   "queries": ["Haifa", "Israel"], "max_per_query": 100,
+   "_note": "not verified - if it shows as ERROR in the run log, delete this entry"}
+]
