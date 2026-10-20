@@ -101,8 +101,39 @@ def fetch_rss(src, cfg):
     return out
 
 
+def fetch_ashby(src, cfg):
+    d = json.loads(http(f"https://api.ashbyhq.com/posting-api/job-board/{src['board']}"))
+    return [job(src["name"], j.get("title"), j.get("location") or j.get("address", {}).get("postalAddress", {}).get("addressLocality", ""),
+                j.get("jobUrl"), f"{src['name']}:{j.get('id')}", j.get("publishedAt", ""))
+            for j in d.get("jobs", [])]
+
+
+def fetch_comeet(src, cfg):
+    url = (f"https://www.comeet.co/careers-api/2.0/company/{src['uid']}/positions"
+           f"?token={src['token']}&details=false")
+    out = []
+    for j in json.loads(http(url)):
+        loc = (j.get("location") or {})
+        where = ", ".join(x for x in (loc.get("city"), loc.get("name")) if x)
+        out.append(job(src["name"], j.get("name"), where,
+                       j.get("url_active_page") or j.get("url_comeet_hosted_page"),
+                       f"{src['name']}:{j.get('uid')}", j.get("time_updated", "")))
+    return out
+
+
+def fetch_smartrecruiters(src, cfg):
+    cid = src["company"]
+    d = json.loads(http(f"https://api.smartrecruiters.com/v1/companies/{cid}/postings?limit=100"
+                        f"&country={src.get('country', 'il')}"))
+    return [job(src["name"], j.get("name"), (j.get("location") or {}).get("city"),
+                f"https://jobs.smartrecruiters.com/{cid}/{j.get('id')}",
+                f"{src['name']}:{j.get('id')}", j.get("releasedDate", ""))
+            for j in d.get("content", [])]
+
+
 FETCH = {"workday": fetch_workday, "greenhouse": fetch_greenhouse,
-         "lever": fetch_lever, "rss": fetch_rss}
+         "lever": fetch_lever, "rss": fetch_rss, "ashby": fetch_ashby,
+         "comeet": fetch_comeet, "smartrecruiters": fetch_smartrecruiters}
 
 
 # ---------------------------------------------------------------- matching
@@ -162,12 +193,14 @@ def main():
     ap.add_argument("--state", default=str(HERE / "seen.json"))
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--notify-existing", action="store_true")
+    ap.add_argument("--replay", action="store_true",
+                    help="test mode: alert on up to 5 CURRENTLY open matching jobs, save nothing")
     a = ap.parse_args()
 
     cfg = json.loads(Path(a.config).read_text(encoding="utf-8"))
     sp = Path(a.state)
-    state = json.loads(sp.read_text()) if sp.exists() else {"jobs": {}}
-    first_run = not sp.exists()
+    state = json.loads(sp.read_text()) if sp.exists() and not a.replay else {"jobs": {}}
+    first_run = not sp.exists() and not a.replay
     matcher = Matcher(cfg)
     now = datetime.now(timezone.utc)
 
@@ -180,13 +213,19 @@ def main():
         except Exception as e:  # noqa: BLE001
             errors.append(f"{src['name']}: {e}")
             continue
+        # A source we have never seen before is "seeded" silently: its currently-open
+        # jobs are remembered but not announced, so adding companies never floods you.
+        seeding = (not a.replay) and src["name"] not in state.setdefault("sources", [])
         for j in jobs:
             if j["id"] in state["jobs"]:
                 continue
             state["jobs"][j["id"]] = now.isoformat()
             v = matcher.verdict(j, src)
-            if v:
+            if v and not seeding:
                 found.append((v, j))
+        if seeding:
+            state["sources"].append(src["name"])
+            print(f"seeded {src['name']}: {len(jobs)} open jobs remembered")
 
     found.sort(key=lambda x: x[0] != "hot")
     muted = first_run and not a.notify_existing and not a.dry_run
@@ -195,7 +234,7 @@ def main():
         send("jobwatch is live", f"Seeded {len(state['jobs'])} existing jobs "
              f"({len(found)} match your filters). New ones will ping you.", "", False, False)
     else:
-        cap = cfg.get("max_alerts_per_run", 15)
+        cap = 5 if a.replay else cfg.get("max_alerts_per_run", 15)
         for v, j in found[:cap]:
             send("New job: " + j["title"], fmt(j, v), j["url"], v == "hot", a.dry_run)
         if len(found) > cap:
@@ -204,10 +243,11 @@ def main():
     # prune old entries so the state file stays small
     cutoff = (now - timedelta(days=cfg.get("keep_days", 120))).isoformat()
     state["jobs"] = {k: v for k, v in state["jobs"].items() if v >= cutoff}
-    if not a.dry_run:
+    if not a.dry_run and not a.replay:
         sp.write_text(json.dumps(state, ensure_ascii=False, indent=0))
 
-    print(f"sources ok, new matches: {len(found)}, errors: {len(errors)}")
+    ok = len([x for x in cfg["sources"] if x.get("enabled", True)]) - len(errors)
+    print(f"sources ok: {ok}, failed: {len(errors)}, new matches: {len(found)}")
     for e in errors:
         print("ERROR", e, file=sys.stderr)
 
