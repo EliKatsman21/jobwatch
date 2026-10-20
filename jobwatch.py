@@ -198,6 +198,13 @@ def main():
     a = ap.parse_args()
 
     cfg = json.loads(Path(a.config).read_text(encoding="utf-8"))
+    # Optional hand-written sources (sources_manual.json) - they never get overwritten
+    # by the discovery tool, and win over a discovered source with the same name.
+    mp = Path(a.config).with_name("sources_manual.json")
+    if mp.exists():
+        manual = json.loads(mp.read_text(encoding="utf-8"))
+        names = {m["name"] for m in manual}
+        cfg["sources"] = [x for x in cfg["sources"] if x["name"] not in names] + manual
     sp = Path(a.state)
     state = json.loads(sp.read_text()) if sp.exists() and not a.replay else {"jobs": {}}
     first_run = not sp.exists() and not a.replay
