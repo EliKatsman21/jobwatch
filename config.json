@@ -97,6 +97,53 @@
         "Haifa"
       ],
       "max_per_query": 100
+    },
+    {
+      "type": "lever",
+      "name": "Zadara",
+      "company": "Zadara"
+    },
+    {
+      "type": "workday",
+      "name": "Marvell",
+      "host": "marvell.wd1.myworkdayjobs.com",
+      "site": "MarvellCareers",
+      "queries": [
+        "Israel",
+        "Haifa",
+        "Yokneam"
+      ],
+      "max_per_query": 100
+    },
+    {
+      "type": "comeet",
+      "name": "Infinidat",
+      "uid": "D6.003",
+      "token": "e114459258d949318a20f66adcfda3c6"
+    },
+    {
+      "type": "workday",
+      "name": "KLA",
+      "host": "kla.wd1.myworkdayjobs.com",
+      "site": "Search",
+      "queries": [
+        "Israel",
+        "Haifa",
+        "Yokneam"
+      ],
+      "max_per_query": 100
+    },
+    {
+      "type": "workday",
+      "name": "Flex",
+      "host": "flextronics.wd1.myworkdayjobs.com",
+      "site": "Careers",
+      "queries": [
+        "Israel",
+        "Haifa",
+        "Yokneam"
+      ],
+      "max_per_query": 100
     }
   ],
   "roster": [

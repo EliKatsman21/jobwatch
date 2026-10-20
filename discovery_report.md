@@ -1,0 +1,43 @@
+# Discovery report
+
+- Mobileye: Comeet found (uid 6A.002) but no token in HTML; add manually
+- Zadara: OK -> lever
+- Medtronic: NOT DETECTED - could not open page (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'jobs.medtronic.com'. (_ssl.c:1000)>). Open https://jobs.medtronic.com/ and send the address of the real job list to be added by hand
+- Philips: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.careers.philips.com/ and send the address of the real job list to be added by hand
+- Boston Scientific: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://jobs.bostonscientific.com/ and send the address of the real job list to be added by hand
+- Marvell: OK -> workday
+- DriveNets: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://drivenets.com/careers/ and send the address of the real job list to be added by hand
+- Valens: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://valens.com/careers/ and send the address of the real job list to be added by hand
+- Intel: NOT DETECTED - could not open page (HTTP Error 403: Forbidden). Open https://jobs.intel.com/ and send the address of the real job list to be added by hand
+- Apple: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://jobs.apple.com/en-il/search?location=haifa-HFA and send the address of the real job list to be added by hand
+- Dell: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://jobs.dell.com/ and send the address of the real job list to be added by hand
+- Cisco: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://jobs.cisco.com/jobs/SearchJobs/?3_109_3=%5B%22102692%22%5D and send the address of the real job list to be added by hand
+- GE HealthCare: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://careers.gehealthcare.com/ and send the address of the real job list to be added by hand
+- Elbit Systems: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://elbitsystemscareer.com/ and send the address of the real job list to be added by hand
+- Rafael: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.rafael.co.il/careers/ and send the address of the real job list to be added by hand
+- Qualitest: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.qualitestgroup.com/careers/ and send the address of the real job list to be added by hand
+- Amdocs: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://jobs.amdocs.com/ and send the address of the real job list to be added by hand
+- Qualcomm: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://careers.qualcomm.com/careers and send the address of the real job list to be added by hand
+- Microsoft: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://careers.microsoft.com/ and send the address of the real job list to be added by hand
+- Google: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.google.com/about/careers/applications/ and send the address of the real job list to be added by hand
+- IBM: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.ibm.com/careers/search and send the address of the real job list to be added by hand
+- Applied Materials: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://careers.appliedmaterials.com/ and send the address of the real job list to be added by hand
+- Plataine: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.plataine.com/careers/ and send the address of the real job list to be added by hand
+- BEYEONICS: NOT DETECTED - could not open page (HTTP Error 404: Not Found). Open https://www.beyeonics.com/careers/ and send the address of the real job list to be added by hand
+- Nanox: NOT DETECTED - could not open page (HTTP Error 403: Forbidden). Open https://www.nanox.vision/careers and send the address of the real job list to be added by hand
+- Harmonic: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.harmonicinc.com/careers/ and send the address of the real job list to be added by hand
+- Clinch: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://clinch.co/careers/ and send the address of the real job list to be added by hand
+- Sunbit: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://sunbit.com/careers/ and send the address of the real job list to be added by hand
+- Infinidat: OK -> comeet
+- KLA: OK -> workday
+- Flex: OK -> workday
+- Tower Semiconductor: NOT DETECTED - could not open page (HTTP Error 404: Not Found). Open https://towersemi.com/careers/ and send the address of the real job list to be added by hand
+- Cellebrite: NOT DETECTED - could not open page (HTTP Error 404: Not Found). Open https://cellebrite.com/en/careers/ and send the address of the real job list to be added by hand
+- SentinelOne: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.sentinelone.com/careers/ and send the address of the real job list to be added by hand
+- Check Point: NOT DETECTED - could not open page (HTTP Error 403: Forbidden). Open https://careers.checkpoint.com/ and send the address of the real job list to be added by hand
+- Wix: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.wix.com/jobs and send the address of the real job list to be added by hand
+- monday.com: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://monday.com/careers and send the address of the real job list to be added by hand
+- CyberArk: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://careers.cyberark.com/ and send the address of the real job list to be added by hand
+- JFrog: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://join.jfrog.com/ and send the address of the real job list to be added by hand
+- Nice: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.nice.com/careers and send the address of the real job list to be added by hand
+- Verint: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://verint.com/careers/ and send the address of the real job list to be added by hand
