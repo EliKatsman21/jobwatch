@@ -1,0 +1,34 @@
+name: discover
+
+# Finds which job system each company in config.json "roster" uses and adds
+# working sources to config.json. Run it once by hand, then it refreshes weekly.
+on:
+  schedule:
+    - cron: "17 3 * * 0"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jobwatch
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Discover job systems
+        run: python3 find_ats.py
+
+      - name: Save config
+        run: |
+          git config user.name "jobwatch"
+          git config user.email "jobwatch@users.noreply.github.com"
+          git add config.json discovery_report.md
+          git diff --cached --quiet && exit 0
+          git commit -q -m "discovery: update sources"
+          git pull --rebase -q && git push -q
