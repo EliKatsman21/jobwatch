@@ -1,11 +1,11 @@
 # Discovery report
 
 - Mobileye: Comeet found (uid 6A.002) but no token in HTML; add manually
-- Zadara: OK -> lever
+- Zadara: already configured
 - Medtronic: NOT DETECTED - could not open page (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'jobs.medtronic.com'. (_ssl.c:1000)>). Open https://jobs.medtronic.com/ and send the address of the real job list to be added by hand
 - Philips: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.careers.philips.com/ and send the address of the real job list to be added by hand
 - Boston Scientific: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://jobs.bostonscientific.com/ and send the address of the real job list to be added by hand
-- Marvell: OK -> workday
+- Marvell: already configured
 - DriveNets: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://drivenets.com/careers/ and send the address of the real job list to be added by hand
 - Valens: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://valens.com/careers/ and send the address of the real job list to be added by hand
 - Intel: NOT DETECTED - could not open page (HTTP Error 403: Forbidden). Open https://jobs.intel.com/ and send the address of the real job list to be added by hand
@@ -28,9 +28,9 @@
 - Harmonic: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.harmonicinc.com/careers/ and send the address of the real job list to be added by hand
 - Clinch: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://clinch.co/careers/ and send the address of the real job list to be added by hand
 - Sunbit: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://sunbit.com/careers/ and send the address of the real job list to be added by hand
-- Infinidat: OK -> comeet
-- KLA: OK -> workday
-- Flex: OK -> workday
+- Infinidat: already configured
+- KLA: already configured
+- Flex: already configured
 - Tower Semiconductor: NOT DETECTED - could not open page (HTTP Error 404: Not Found). Open https://towersemi.com/careers/ and send the address of the real job list to be added by hand
 - Cellebrite: NOT DETECTED - could not open page (HTTP Error 404: Not Found). Open https://cellebrite.com/en/careers/ and send the address of the real job list to be added by hand
 - SentinelOne: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.sentinelone.com/careers/ and send the address of the real job list to be added by hand
