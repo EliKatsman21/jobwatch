@@ -23,7 +23,7 @@
 - IBM: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.ibm.com/careers/search and send the address of the real job list to be added by hand
 - Applied Materials: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://careers.appliedmaterials.com/ and send the address of the real job list to be added by hand
 - Plataine: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.plataine.com/careers/ and send the address of the real job list to be added by hand
-- BEYEONICS: NOT DETECTED - could not open page (HTTP Error 404: Not Found). Open https://www.beyeonics.com/careers/ and send the address of the real job list to be added by hand
+- BEYEONICS: NOT DETECTED - could not open page (HTTP Error 504: Gateway Timeout). Open https://www.beyeonics.com/careers/ and send the address of the real job list to be added by hand
 - Nanox: NOT DETECTED - could not open page (HTTP Error 403: Forbidden). Open https://www.nanox.vision/careers and send the address of the real job list to be added by hand
 - Harmonic: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.harmonicinc.com/careers/ and send the address of the real job list to be added by hand
 - Clinch: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://clinch.co/careers/ and send the address of the real job list to be added by hand
@@ -33,7 +33,7 @@
 - Flex: already configured
 - Tower Semiconductor: NOT DETECTED - could not open page (HTTP Error 404: Not Found). Open https://towersemi.com/careers/ and send the address of the real job list to be added by hand
 - Cellebrite: NOT DETECTED - could not open page (HTTP Error 404: Not Found). Open https://cellebrite.com/en/careers/ and send the address of the real job list to be added by hand
-- SentinelOne: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.sentinelone.com/careers/ and send the address of the real job list to be added by hand
+- SentinelOne: NOT DETECTED - could not open page (HTTP Error 429: Too Many Requests). Open https://www.sentinelone.com/careers/ and send the address of the real job list to be added by hand
 - Check Point: NOT DETECTED - could not open page (HTTP Error 403: Forbidden). Open https://careers.checkpoint.com/ and send the address of the real job list to be added by hand
 - Wix: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.wix.com/jobs and send the address of the real job list to be added by hand
 - monday.com: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://monday.com/careers and send the address of the real job list to be added by hand
