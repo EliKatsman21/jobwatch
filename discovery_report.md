@@ -2,7 +2,7 @@
 
 - Mobileye: Comeet found (uid 6A.002) but no token in HTML; add manually
 - Zadara: already configured
-- Medtronic: NOT DETECTED - could not open page (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'jobs.medtronic.com'. (_ssl.c:1000)>). Open https://jobs.medtronic.com/ and send the address of the real job list to be added by hand
+- Medtronic: NOT DETECTED - could not open page (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'jobs.medtronic.com'. (_ssl.c:1081)>). Open https://jobs.medtronic.com/ and send the address of the real job list to be added by hand
 - Philips: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.careers.philips.com/ and send the address of the real job list to be added by hand
 - Boston Scientific: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://jobs.bostonscientific.com/ and send the address of the real job list to be added by hand
 - Marvell: already configured
@@ -40,4 +40,4 @@
 - CyberArk: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://careers.cyberark.com/ and send the address of the real job list to be added by hand
 - JFrog: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://join.jfrog.com/ and send the address of the real job list to be added by hand
 - Nice: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.nice.com/careers and send the address of the real job list to be added by hand
-- Verint: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://verint.com/careers/ and send the address of the real job list to be added by hand
+- Verint: OK -> ashby

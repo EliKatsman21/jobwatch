@@ -144,6 +144,11 @@
         "Yokneam"
       ],
       "max_per_query": 100
+    },
+    {
+      "type": "ashby",
+      "name": "Verint",
+      "board": "27cfd344-670f-4dcd-8b13-0e18005b0d65"
     }
   ],
   "roster": [
