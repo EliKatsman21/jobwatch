@@ -23,7 +23,7 @@
 - IBM: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.ibm.com/careers/search and send the address of the real job list to be added by hand
 - Applied Materials: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://careers.appliedmaterials.com/ and send the address of the real job list to be added by hand
 - Plataine: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.plataine.com/careers/ and send the address of the real job list to be added by hand
-- BEYEONICS: NOT DETECTED - could not open page (HTTP Error 504: Gateway Timeout). Open https://www.beyeonics.com/careers/ and send the address of the real job list to be added by hand
+- BEYEONICS: NOT DETECTED - could not open page (HTTP Error 404: Not Found). Open https://www.beyeonics.com/careers/ and send the address of the real job list to be added by hand
 - Nanox: NOT DETECTED - could not open page (HTTP Error 403: Forbidden). Open https://www.nanox.vision/careers and send the address of the real job list to be added by hand
 - Harmonic: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.harmonicinc.com/careers/ and send the address of the real job list to be added by hand
 - Clinch: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://clinch.co/careers/ and send the address of the real job list to be added by hand
@@ -40,4 +40,4 @@
 - CyberArk: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://careers.cyberark.com/ and send the address of the real job list to be added by hand
 - JFrog: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://join.jfrog.com/ and send the address of the real job list to be added by hand
 - Nice: NOT DETECTED - no known job system found (page may be JavaScript-rendered). Open https://www.nice.com/careers and send the address of the real job list to be added by hand
-- Verint: OK -> ashby
+- Verint: already configured
